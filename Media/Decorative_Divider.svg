@@ -1,0 +1,10 @@
+<svg width="300" height="40" viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#d4af37">
+                        <line x1="0" y1="20" x2="120" y2="20" stroke="#d4af37" stroke-width="2"/>
+                        <line x1="180" y1="20" x2="300" y2="20" stroke="#d4af37" stroke-width="2"/>
+                        <!-- Center ornament -->
+                        <circle cx="150" cy="20" r="8" fill="none" stroke="#d4af37" stroke-width="2"/>
+                        <circle cx="150" cy="20" r="4" fill="#1e3a8a"/>
+                        <path d="M142,20 L150,12 L158,20 L150,28 Z" fill="#d4af37"/>
+                    </g>
+                </svg>

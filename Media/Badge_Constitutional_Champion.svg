@@ -1,0 +1,17 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Blue background -->
+                    <circle cx="75" cy="75" r="70" fill="#4682b4"/>
+                    <circle cx="75" cy="75" r="65" fill="#87ceeb"/>
+                    <circle cx="75" cy="75" r="55" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+                    
+                    <!-- Shield icon -->
+                    <g fill="#1e3a8a">
+                        <path d="M75,45 Q55,45 55,60 Q55,85 75,100 Q95,85 95,60 Q95,45 75,45"/>
+                        <path d="M75,50 Q60,50 60,62 Q60,82 75,95 Q90,82 90,62 Q90,50 75,50" fill="#fefcf7"/>
+                        <!-- Star in center -->
+                        <path d="M75,60 L77,66 L83,66 L78,70 L80,76 L75,72 L70,76 L72,70 L67,66 L73,66 Z" fill="#dc2626"/>
+                    </g>
+                    
+                    <text x="75" y="130" text-anchor="middle" font-family="Times New Roman, serif" font-size="8" font-weight="bold" fill="#1e3a8a">CONSTITUTIONAL</text>
+                    <text x="75" y="142" text-anchor="middle" font-family="Times New Roman, serif" font-size="8" font-weight="bold" fill="#1e3a8a">CHAMPION</text>
+                </svg>

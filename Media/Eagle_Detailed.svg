@@ -1,0 +1,19 @@
+<svg width="120" height="100" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#1e3a8a">
+                        <!-- Eagle body -->
+                        <ellipse cx="60" cy="50" rx="15" ry="25"/>
+                        <!-- Wings spread -->
+                        <path d="M45,45 Q20,30 10,50 Q20,60 35,55 Q40,50 45,45"/>
+                        <path d="M75,45 Q100,30 110,50 Q100,60 85,55 Q80,50 75,45"/>
+                        <!-- Head -->
+                        <circle cx="60" cy="30" r="12"/>
+                        <!-- Beak -->
+                        <path d="M72,30 L80,32 L75,35 Z" fill="#d4af37"/>
+                        <!-- Eye -->
+                        <circle cx="65" cy="28" r="2" fill="white"/>
+                        <circle cx="66" cy="28" r="1" fill="black"/>
+                        <!-- Talons -->
+                        <path d="M55,75 L50,85 M52,85 L48,88 M55,85 L52,88 M58,85 L55,88" stroke="#d4af37" stroke-width="2" fill="none"/>
+                        <path d="M65,75 L70,85 M68,85 L72,88 M65,85 L68,88 M62,85 L65,88" stroke="#d4af37" stroke-width="2" fill="none"/>
+                    </g>
+                </svg>

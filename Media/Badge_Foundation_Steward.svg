@@ -1,0 +1,20 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Bronze background -->
+                    <circle cx="75" cy="75" r="70" fill="#cd7f32"/>
+                    <circle cx="75" cy="75" r="65" fill="#daa520"/>
+                    <circle cx="75" cy="75" r="55" fill="none" stroke="#b8860b" stroke-width="2"/>
+                    
+                    <!-- Building/Pillar icon -->
+                    <g fill="#1e3a8a">
+                        <rect x="50" y="100" width="50" height="8"/>
+                        <rect x="45" y="108" width="60" height="6"/>
+                        <rect x="55" y="60" width="8" height="40"/>
+                        <rect x="67" y="60" width="8" height="40"/>
+                        <rect x="79" y="60" width="8" height="40"/>
+                        <rect x="91" y="60" width="8" height="40"/>
+                        <rect x="50" y="55" width="50" height="8"/>
+                    </g>
+                    
+                    <text x="75" y="130" text-anchor="middle" font-family="Times New Roman, serif" font-size="9" font-weight="bold" fill="#1e3a8a">FOUNDATION</text>
+                    <text x="75" y="142" text-anchor="middle" font-family="Times New Roman, serif" font-size="9" font-weight="bold" fill="#1e3a8a">STEWARD</text>
+                </svg>

@@ -1,0 +1,19 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Gold background -->
+                    <circle cx="75" cy="75" r="70" fill="#d4af37"/>
+                    <circle cx="75" cy="75" r="65" fill="#ffd700"/>
+                    <circle cx="75" cy="75" r="55" fill="none" stroke="#b8860b" stroke-width="2"/>
+                    
+                    <!-- Trophy icon -->
+                    <g fill="#1e3a8a">
+                        <rect x="65" y="85" width="20" height="30" rx="2"/>
+                        <ellipse cx="75" cy="85" rx="15" ry="8"/>
+                        <path d="M55,75 Q50,65 55,55 L95,55 Q100,65 95,75 Q90,80 85,78 L85,65 L65,65 L65,78 Q60,80 55,75"/>
+                        <!-- Handles -->
+                        <path d="M50,60 Q45,60 45,65 Q45,70 50,70" stroke="#1e3a8a" stroke-width="3" fill="none"/>
+                        <path d="M100,60 Q105,60 105,65 Q105,70 100,70" stroke="#1e3a8a" stroke-width="3" fill="none"/>
+                    </g>
+                    
+                    <text x="75" y="130" text-anchor="middle" font-family="Times New Roman, serif" font-size="10" font-weight="bold" fill="#1e3a8a">FOUNDING</text>
+                    <text x="75" y="142" text-anchor="middle" font-family="Times New Roman, serif" font-size="10" font-weight="bold" fill="#1e3a8a">ARCHITECT</text>
+                </svg>

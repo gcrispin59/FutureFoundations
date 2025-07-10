@@ -1,0 +1,17 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Silver background -->
+                    <circle cx="75" cy="75" r="70" fill="#c0c0c0"/>
+                    <circle cx="75" cy="75" r="65" fill="#e5e5e5"/>
+                    <circle cx="75" cy="75" r="55" fill="none" stroke="#a9a9a9" stroke-width="2"/>
+                    
+                    <!-- Hammer icon -->
+                    <g fill="#1e3a8a">
+                        <rect x="40" y="85" width="35" height="8" rx="4"/>
+                        <rect x="72" y="60" width="6" height="50" rx="3"/>
+                        <circle cx="75" cy="55" r="8"/>
+                        <rect x="70" y="45" width="10" height="6" rx="3"/>
+                    </g>
+                    
+                    <text x="75" y="130" text-anchor="middle" font-family="Times New Roman, serif" font-size="10" font-weight="bold" fill="#1e3a8a">FUTURE</text>
+                    <text x="75" y="142" text-anchor="middle" font-family="Times New Roman, serif" font-size="10" font-weight="bold" fill="#1e3a8a">BUILDER</text>
+                </svg>
