@@ -1,0 +1,25 @@
+{
+  "name": "future-foundations",
+  "version": "1.0.0",
+  "description": "AI Safety & Human Flourishing Research Platform",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "db:migrate": "node scripts/migrate.js",
+    "db:setup": "npm run db:migrate"
+  },
+  "keywords": [
+    "ai-safety",
+    "human-flourishing",
+    "multi-agent-systems"
+  ],
+  "author": "Future Foundations Team",
+  "license": "MIT",
+  "dependencies": {
+    "@netlify/neon": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

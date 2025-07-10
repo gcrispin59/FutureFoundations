@@ -1,0 +1,23 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  framework = "#static"
+  targetPort = 3999
+
+[[plugins]]
+  package = "@netlify/plugin-functions-core"
+
+# Environment-specific settings
+[context.production.environment]
+  FUTURE_FOUNDATIONS_ENV = "production"
+
+[context.deploy-preview.environment]
+  FUTURE_FOUNDATIONS_ENV = "preview"
+
+[context.branch-deploy.environment]
+  FUTURE_FOUNDATIONS_ENV = "branch"

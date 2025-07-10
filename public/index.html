@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Future Foundations</title>
+    <style>
+        body { 
+            font-family: system-ui, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+            line-height: 1.6; 
+            background: #fafafa;
+        }
+        .status { padding: 1rem; border-radius: 0.5rem; margin: 1rem 0; }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .info { background: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; }
+        .loading { background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; }
+        .error { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        .project-card { 
+            border: 1px solid #e0e0e0; 
+            border-radius: 0.5rem; 
+            padding: 1.5rem; 
+            margin: 1rem 0; 
+            background: white; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .metric { 
+            display: inline-block; 
+            background: #007bff; 
+            color: white; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 0.25rem; 
+            margin: 0.25rem; 
+            font-size: 0.875rem; 
+        }
+        button { 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 0.5rem 1rem; 
+            border-radius: 0.25rem; 
+            cursor: pointer; 
+            margin: 0.25rem; 
+            transition: background 0.2s;
+        }
+        button:hover { background: #0056b3; }
+        button:disabled { background: #6c757d; cursor: not-allowed; }
+        .api-test { 
+            margin: 2rem 0; 
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        pre { 
+            background: #f8f9fa; 
+            padding: 1rem; 
+            border-radius: 0.25rem; 
+            overflow-x: auto; 
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 1rem;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.9;
+        }
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .project-component {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .project-component h4 {
+            margin-top: 0;
+            color: #495057;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Future Foundations</h1>
+        <p><em>AI Safety & Human Flourishing Research Platform</em></p>
+    </div>
+
+    <div id="status" class="status loading">
+        <strong>⏳ Loading...</strong> Checking system status...
+    </div>
+
+    <div class="info">
+        <h3>🎯 Mission</h3>
+        <p>Using AI for the benefit of humanity while preserving human agency, authenticity, and liberty through strategic risk assessment, behavioral economics, and multi-agent coordination systems.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>🏗️ Project Ecosystem <span class="badge">OPERATIONAL</span></h3>
+        
+        <div class="ecosystem-grid">
+            <div class="project-component">
+                <h4>🏛️ True to the Oath</h4>
+                <p>Institutional integrity and accountability framework with virtue metrics and transparency portals.</p>
+            </div>
+            
+            <div class="project-component">
+                <h4>🗳️ Political Candidate Covenant</h4>
+                <p>Candidate assessment and voter matching system with policy alignment analysis.</p>
+            </div>
+            
+            <div class="project-component">
+                <h4>👤 Individual Responsibility (MAGGie)</h4>
+                <p>Personal empowerment through Agency, Journey mapping, and Resiliency development.</p>
+            </div>
+            
+            <div class="project-component">
+                <h4>⚠️ ARTI Scale</h4>
+                <p>AI threat assessment and risk modeling with human-AI collaboration safeguards.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="api-test">
+        <h3>🔧 API Status & Testing</h3>
+        <p>Test the core functionality of your Future Foundations ecosystem:</p>
+        
+        <button onclick="testAPI()">🔗 Test Database Connection</button>
+        <button onclick="testMetrics()">📊 Check Shared Metrics</button>
+        <button onclick="testPersona()">🎭 Test Persona Selection</button>
+        <button onclick="testFullSystem()">🚀 Full System Test</button>
+        
+        <div id="api-results"></div>
+    </div>
+
+    <div class="info">
+        <h3>🎯 Core Principles</h3>
+        <ul>
+            <li><strong>Human Autonomy:</strong> All systems preserve and enhance individual choice</li>
+            <li><strong>Authentic Self-Expression:</strong> Resistance to manipulative optimization</li>
+            <li><strong>Beneficial AI Development:</strong> Positive-sum human-AI collaboration</li>
+            <li><strong>Strategic Risk Assessment:</strong> Proactive threat identification and mitigation</li>
+        </ul>
+    </div>
+
+    <div class="project-card">
+        <h3>📚 Quick Links</h3>
+        <p><strong>API Endpoints:</strong></p>
+        <ul>
+            <li><code>/api/health</code> - System health check</li>
+            <li><code>/api/metrics</code> - Shared metrics dashboard</li>
+            <li><code>/api/persona</code> - AI persona selection</li>
+            <li><code>/api/individuals</code> - Individual management</li>
+            <li><code>/api/candidates</code> - Political candidate data</li>
+            <li><code>/api/arti</code> - ARTI Scale threat assessment</li>
+        </ul>
+    </div>
+
+    <script>
+        // Check system status on load
+        window.addEventListener('load', checkStatus);
+
+        async function checkStatus() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                
+                const statusDiv = document.getElementById('status');
+                if (data.healthy) {
+                    statusDiv.className = 'status success';
+                    statusDiv.innerHTML = '<strong>✅ System Healthy</strong> All systems operational. Database connected successfully.';
+                } else {
+                    statusDiv.className = 'status error';
+                    statusDiv.innerHTML = '<strong>❌ System Error</strong> ' + (data.error || 'Unknown error detected.');
+                }
+            } catch (error) {
+                const statusDiv = document.getElementById('status');
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '<strong>❌ Connection Failed</strong> Cannot reach API. Make sure <code>netlify dev</code> is running.';
+            }
+        }
+
+        async function testAPI() {
+            const resultsDiv = document.getElementById('api-results');
+            resultsDiv.innerHTML = '<div class="status loading">🔄 Testing database connection...</div>';
+            
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                
+                resultsDiv.innerHTML = `
+                    <div class="status success">
+                        <strong>✅ Database Test Successful</strong>
+                        <p>Connection established and database responding normally.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </div>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Database Test Failed</strong>
+                        <p>Could not establish database connection.</p>
+                        <pre>${error.message}</pre>
+                    </div>
+                `;
+            }
+        }
+
+        async function testMetrics() {
+            const resultsDiv = document.getElementById('api-results');
+            resultsDiv.innerHTML = '<div class="status loading">📊 Loading shared metrics...</div>';
+            
+            try {
+                const response = await fetch('/api/metrics');
+                const data = await response.json();
+                
+                resultsDiv.innerHTML = `
+                    <div class="status success">
+                        <strong>📊 Shared Metrics Retrieved</strong>
+                        <p>Found ${data.length} metrics tracking system health and human flourishing.</p>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    </div>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Metrics Test Failed</strong>
+                        <p>Could not retrieve shared metrics.</p>
+                        <pre>${error.message}</pre>
+                    </div>
+                `;
+            }
+        }
+
+        async function testPersona() {
+            const resultsDiv = document.getElementById('api-results');
+            resultsDiv.innerHTML = '<div class="status loading">🎭 Testing persona selection matrix...</div>';
+            
+            try {
+                const testData = {
+                    project_context: 'agency',
+                    user_context: { 
+                        expertise_level: 'beginner',
+                        emotional_state: 'curious',
+                        preferences: { interaction_style: 'supportive' }
+                    },
+                    interaction_type: 'identity-discovery'
+                };
+                
+                const response = await fetch('/api/persona', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(testData)
+                });
+                const data = await response.json();
+                
+                resultsDiv.innerHTML = `
+                    <div class="status success">
+                        <strong>🎭 Persona Selection Test Successful</strong>
+                        <p><strong>Recommended Persona:</strong> <code>${data.recommended_persona}</code></p>
+                        <p><strong>Context:</strong> Agency project, identity discovery for beginner user</p>
+                        <p>This demonstrates the strategic persona selection matrix preserving human agency through appropriate AI interaction styles.</p>
+                        <details>
+                            <summary>View Test Data</summary>
+                            <pre>${JSON.stringify(testData, null, 2)}</pre>
+                        </details>
+                    </div>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Persona Test Failed</strong>
+                        <p>Could not test persona selection system.</p>
+                        <pre>${error.message}</pre>
+                    </div>
+                `;
+            }
+        }
+
+        async function testFullSystem() {
+            const resultsDiv = document.getElementById('api-results');
+            resultsDiv.innerHTML = '<div class="status loading">🚀 Running comprehensive system test...</div>';
+            
+            const tests = [
+                { name: 'Database Health', endpoint: '/api/health' },
+                { name: 'Shared Metrics', endpoint: '/api/metrics' },
+                { name: 'Persona Selection', endpoint: '/api/persona', method: 'POST', body: { project_context: 'test', interaction_type: 'test' } }
+            ];
+            
+            const results = [];
+            
+            for (const test of tests) {
+                try {
+                    const options = {
+                        method: test.method || 'GET',
+                        headers: { 'Content-Type': 'application/json' }
+                    };
+                    
+                    if (test.body) {
+                        options.body = JSON.stringify(test.body);
+                    }
+                    
+                    const response = await fetch(test.endpoint, options);
+                    const data = await response.json();
+                    
+                    results.push({
+                        test: test.name,
+                        status: response.ok ? '✅ PASS' : '❌ FAIL',
+                        response: data
+                    });
+                } catch (error) {
+                    results.push({
+                        test: test.name,
+                        status: '❌ ERROR',
+                        error: error.message
+                    });
+                }
+            }
+            
+            const passCount = results.filter(r => r.status.includes('PASS')).length;
+            const totalCount = results.length;
+            
+            resultsDiv.innerHTML = `
+                <div class="status ${passCount === totalCount ? 'success' : 'error'}">
+                    <strong>🚀 System Test Complete: ${passCount}/${totalCount} Tests Passed</strong>
+                    <pre>${results.map(r => `${r.status} ${r.test}`).join('\n')}</pre>
+                    <details>
+                        <summary>View Detailed Results</summary>
+                        <pre>${JSON.stringify(results, null, 2)}</pre>
+                    </details>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
