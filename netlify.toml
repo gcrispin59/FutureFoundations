@@ -9,9 +9,6 @@
   framework = "#static"
   targetPort = 3999
 
-[[plugins]]
-  package = "@netlify/plugin-functions-core"
-
 # Environment-specific settings
 [context.production.environment]
   FUTURE_FOUNDATIONS_ENV = "production"
