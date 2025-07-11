@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deconstructing Disaster Risk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .tooltip-content {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            position: absolute;
+            background-color: #005F73;
+            color: #FFFFFF;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            z-index: 10;
+            font-size: 0.875rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc(100% + 10px); /* Position above the element */
+        }
+        .tooltip-container:hover .tooltip-content {
+            visibility: visible;
+            opacity: 1;
+        }
+        .tooltip-content::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #005F73 transparent transparent transparent;
+        }
+
+        .mole-hole {
+            width: 80px;
+            height: 80px;
+            background-color: #E9D8A6;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #CA6702;
+        }
+        .mole {
+            position: absolute;
+            bottom: -50px; /* Hidden initially */
+            font-size: 3rem;
+            transition: bottom 0.3s ease-out;
+            color: #9B2226;
+            pointer-events: none; /* Allow clicks to pass through to hole */
+        }
+        .mole.active {
+            bottom: 5px; /* Visible */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Chosen Color Palette: Brilliant Blues -->
+    <!-- HEX Codes: #005F73 (Dark Blue), #0A9396 (Teal), #94D2BD (Light Teal), #E9D8A6 (Sand), #EE9B00 (Orange), #CA6702 (Dark Orange), #BB3E03 (Burnt Sienna), #AE2012 (Dark Red), #9B2226 (Maroon) -->
+
+    <header class="bg-[#005F73] text-white text-center py-10 px-4">
+        <h1 class="text-3xl md:text-5xl font-black tracking-tight">Deconstructing Disaster Risk</h1>
+        <p class="mt-3 max-w-2xl mx-auto text-lg text-[#94D2BD]">Understanding the formula behind risk and the 'Whack-a-Mole' dilemma in mitigation.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="risk-formula" class="my-12 bg-white rounded-lg shadow-md p-6 md:p-10 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-[#005F73]">The Risk Equation: A Framework for Action</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-8">Risk is not abstract. It's a calculation of potential harm, influenced by your investments in prevention, the value of what's at stake, and the unpredictable nature of disasters. Hover over each variable to understand its role.</p>
+
+            <div class="text-center text-2xl md:text-3xl font-bold text-[#AE2012] mb-8">
+                $$R = \sum_{i} \left[ (C_{A_i} + C_{T_i}) \times (U_{F_i} \times I_{F_i} \times P_{F_i}) \right] + U_C$$
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">R: Total Risk</span>
+                    <div class="tooltip-content">
+                        <p>The overall potential for adverse consequences from all identified hazards. Your goal is to minimize this value.</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">&sum; (Summation)</span>
+                    <div class="tooltip-content">
+                        <p>This symbol means we sum up the risk contribution from each individual identified risk (i) to get the total picture.</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">$C_{A_i}$: Cost of Avoidance</span>
+                    <div class="tooltip-content">
+                        <p>Your investment in preventing risk 'i'. This includes dam repairs, early warning systems, resilient infrastructure upgrades, and ongoing maintenance.</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">$C_{T_i}$: Cost of Transfer</span>
+                    <div class="tooltip-content">
+                        <p>The cost of shifting risk 'i' to another party. For disaster risk, this often refers to insurance premiums or other financial instruments that cover potential losses.</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">$U_{F_i}$: Utility Factor</span>
+                    <div class="tooltip-content">
+                        <p>The importance or value of the asset/system at risk 'i'. This could be the number of lives, the economic value of property, or the critical function of infrastructure (e.g., a hospital).</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">$I_{F_i}$: Impact Factor</span>
+                    <div class="tooltip-content">
+                        <p>The severity of consequences if risk 'i' occurs. This factor quantifies the magnitude of damage, disruption, or loss (e.g., on a scale of 0-1, where 1 is catastrophic).</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">$P_{F_i}$: Probability Factor</span>
+                    <div class="tooltip-content">
+                        <p>The likelihood of risk 'i' occurring. This is the chance of an event happening (e.g., probability of dam failure, probability of a 100-year flood).</p>
+                    </div>
+                </div>
+
+                <div class="relative p-4 bg-blue-50 rounded-lg border-2 border-[#0A9396] tooltip-container">
+                    <span class="font-bold text-xl text-[#005F73]">$U_C$: Uncertainty Component</span>
+                    <div class="tooltip-content">
+                        <p>An additive factor accounting for unforeseen variables, data gaps, or unpredictable events. Disasters often have elements we cannot fully predict.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-16 border-t-2 border-gray-200">
+
+        <section id="whack-a-mole" class="my-12 bg-white rounded-lg shadow-md p-6 md:p-10 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-[#005F73]">The "Whack-a-Mole" Dilemma in Mitigation</h2>
+            <p class="max-w-3xl mx-auto text-gray-600 mb-8">Addressing one risk in isolation can inadvertently expose or exacerbate others. Effective mitigation requires a holistic view, understanding the interconnectedness of vulnerabilities. Click the moles to see how they pop up elsewhere!</p>
+
+            <div id="mole-grid" class="grid grid-cols-3 gap-4 max-w-md mx-auto p-4 bg-[#94D2BD] rounded-lg shadow-inner border-4 border-[#0A9396]">
+                <!-- Mole holes will be generated here by JS -->
+            </div>
+            <p id="mole-message" class="mt-4 text-lg font-semibold text-[#AE2012]"></p>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#005F73] text-white py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="font-bold">FutureFoundationsPAC.org</p>
+            <p class="text-sm text-[#94D2BD]">Building a more resilient America.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Whack-a-Mole Game Logic
+        const moleGrid = document.getElementById('mole-grid');
+        const moleMessage = document.getElementById('mole-message');
+        const numHoles = 9;
+        let activeMole = -1;
+        let lastMole = -1;
+
+        function createHoles() {
+            for (let i = 0; i < numHoles; i++) {
+                const hole = document.createElement('div');
+                hole.classList.add('mole-hole');
+                hole.dataset.index = i;
+                hole.innerHTML = '<span class="mole">🦡</span>';
+                hole.addEventListener('click', whackMole);
+                moleGrid.appendChild(hole);
+            }
+        }
+
+        function showMole() {
+            if (activeMole !== -1) {
+                moleGrid.children[activeMole].querySelector('.mole').classList.remove('active');
+            }
+
+            let nextMole;
+            do {
+                nextMole = Math.floor(Math.random() * numHoles);
+            } while (nextMole === lastMole); // Ensure new mole is different from the last
+
+            activeMole = nextMole;
+            moleGrid.children[activeMole].querySelector('.mole').classList.add('active');
+            lastMole = activeMole;
+            moleMessage.textContent = 'A risk appears! Click the mole to mitigate it.';
+        }
+
+        function whackMole(event) {
+            const clickedIndex = parseInt(event.currentTarget.dataset.index);
+            if (clickedIndex === activeMole) {
+                moleGrid.children[activeMole].querySelector('.mole').classList.remove('active');
+                moleMessage.textContent = 'You mitigated that risk! But watch out... another might emerge.';
+                setTimeout(showMole, 800); // Show a new mole after a short delay
+            } else {
+                moleMessage.textContent = 'That\'s not the active risk! Focus on the right one.';
+            }
+        }
+
+        createHoles();
+        showMole(); // Initial mole display
+    </script>
+</body>
+</html>

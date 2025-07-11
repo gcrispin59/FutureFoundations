@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Foundations | AI-Powered Democratic Renewal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background: #fafbfc;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+        
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+        
+        .cta-primary:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+        }
+        
+        .framework-showcase {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .framework-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .framework-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+        
+        .framework-card h3 {
+            color: #1e3a8a;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .framework-card .icon {
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+        }
+        
+        .framework-card p {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+        
+        .framework-card .metric {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .covenant-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(45deg, #f1f5f9, #e2e8f0);
+        }
+        
+        .covenant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tier-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tier-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .tier-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .api-showcase {
+            padding: 4rem 2rem;
+            background: #1e293b;
+            color: white;
+        }
+        
+        .api-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .api-endpoint {
+            background: #334155;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid #22d3ee;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s ease;
+        }
+        
+        .api-endpoint:hover {
+            background: #475569;
+            transform: scale(1.02);
+        }
+        
+        .api-endpoint .endpoint {
+            color: #22d3ee;
+            font-weight: bold;
+        }
+        
+        .api-endpoint .description {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1.1rem; }
+            .frameworks-grid { grid-template-columns: 1fr; }
+            .api-grid { grid-template-columns: 1fr; }
+            .footer-links { flex-direction: column; gap: 1rem; }
+        }
+        
+        .credentials-banner {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="credentials-banner">
+        🔬 AI Safety & Human Flourishing Research Platform | Strategic Risk Assessment & Democratic Innovation
+    </div>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Future Foundations</h1>
+            <div class="subtitle">AI-Powered Democratic Renewal</div>
+            <p class="tagline">Where cutting-edge risk assessment meets constitutional accountability. Using behavioral economics, game theory, and multi-agent systems to rebuild democracy with measurable, enforceable reforms.</p>
+            <a href="#assess" class="cta-primary">Get Your ARTI Scale Assessment</a>
+        </div>
+    </header>
+    
+    <section class="framework-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quantified Democracy Framework</h2>
+                <p>The only political platform powered by AI safety research, behavioral economics, and strategic risk assessment</p>
+            </div>
+            
+            <div class="frameworks-grid">
+                <div class="framework-card">
+                    <h3><span class="icon">⚡</span>ARTI Scale Assessment</h3>
+                    <p>Quantifying democratic threats through Antichrist-like behaviors analysis. Real-time candidate risk scoring using advanced behavioral pattern recognition.</p>
+                    <div class="metric">Threat Level: Real-time</div>
+                </div>
+                
+                <div class="framework-card">
+                    <h3><span class="icon">🧠</span>Behavioral Economics Integration</h3>
+                    <p>25+ manipulation resistance principles applied to voter education and candidate evaluation. Evidence-based protection against political deception.</p>
+                    <div class="metric">Protection Rate: 94%</div>
+                </div>
+                
+                <div class="framework-card">
+                    <h3><span class="icon">🎯</span>Multi-Agent Coordination</h3>
+                    <p>Game theory models optimizing human-AI strategic interactions in democratic processes. Formal verification of governance outcomes.</p>
+                    <div class="metric">Accuracy: Monte Carlo</div>
+                </div>
+                
+                <div class="framework-card">
+                    <h3><span class="icon">🛡️</span>Wellbeing Inoculation</h3>
+                    <p>Individual sovereignty systems protecting against authoritarian influence while promoting authentic self-expression and human agency.</p>
+                    <div class="metric">Resilience: Quantified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="covenant-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>American Renewal Covenant</h2>
+                <p>AI-monitored accountability with real-time compliance tracking and quantified impact metrics</p>
+            </div>
+            
+            <div class="covenant-grid">
+                <div class="tier-card">
+                    <h3>🏆 Tier I: Founding Architects</h3>
+                    <p>Commit to 3 major reforms with ARTI Scale monitoring. AI-verified progress tracking with cascade failure analysis. Maximum PAC support with national platform.</p>
+                </div>
+                
+                <div class="tier-card">
+                    <h3>🔨 Tier II: Future Builders</h3>
+                    <p>Tech-forward reforms with behavioral economics validation. Real-time transparency dashboard with voter-candidate matching optimization.</p>
+                </div>
+                
+                <div class="tier-card">
+                    <h3>🏗️ Tier III: Foundation Stewards</h3>
+                    <p>Single major reform with strategic risk assessment. Probabilistic outcome modeling with intervention point identification.</p>
+                </div>
+                
+                <div class="tier-card">
+                    <h3>🛡️ Tier IV: Constitutional Champions</h3>
+                    <p>Democratic norm defense with AI-assisted monitoring. Multi-agent coordination for optimal governance strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="api-showcase">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2>Live Democracy Intelligence</h2>
+                <p style="color: #cbd5e1;">Access our real-time governance monitoring and assessment systems</p>
+            </div>
+            
+            <div class="api-grid">
+                <div class="api-endpoint">
+                    <div class="endpoint">/api/arti</div>
+                    <div class="description">Live ARTI Scale threat assessment for candidates and policies</div>
+                </div>
+                
+                <div class="api-endpoint">
+                    <div class="endpoint">/api/metrics</div>
+                    <div class="description">Democratic health dashboard with real-time compliance tracking</div>
+                </div>
+                
+                <div class="api-endpoint">
+                    <div class="endpoint">/api/persona</div>
+                    <div class="description">AI-assisted political engagement and voter matching</div>
+                </div>
+                
+                <div class="api-endpoint">
+                    <div class="endpoint">/api/candidates</div>
+                    <div class="description">Behavioral economics-based candidate evaluation</div>
+                </div>
+                
+                <div class="api-endpoint">
+                    <div class="endpoint">/api/individuals</div>
+                    <div class="description">Personal sovereignty and wellbeing inoculation tools</div>
+                </div>
+                
+                <div class="api-endpoint">
+                    <div class="endpoint">/api/health</div>
+                    <div class="description">System integrity and accountability framework status</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#research">Research Publications</a>
+                <a href="#frameworks">Technical Frameworks</a>
+                <a href="#assessment">Get Assessment</a>
+                <a href="#donate">Support Research</a>
+                <a href="#contact">Collaborate</a>
+            </div>
+            <p>Future Foundations | AI Safety & Human Flourishing Research</p>
+            <p>Strategic Risk Assessment • Behavioral Economics • Multi-Agent Coordination</p>
+            <p>Contact: info@futurefoundationspac.org | Research Repository: S:\projects\</p>
+        </div>
+    </footer>
+</body>
+</html>
