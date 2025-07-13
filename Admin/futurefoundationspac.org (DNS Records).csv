@@ -1,0 +1,8 @@
+name,ttl,type,value
+"futurefoundationspac.org","3600","NETLIFY","futurefoundationspac.netlify.app"
+"www.futurefoundationspac.org","3600","NETLIFY","futurefoundationspac.netlify.app"
+"futurefoundationspac.org","3600","TXT","NETORGFT19157970.onmicrosoft.com"
+"futurefoundationspac.org","3600","TXT","v=spf1 include:secureserver.net -all"
+"autodiscover.futurefoundationspac.org","3600","CNAME","autodiscover.outlook.com"
+"email.futurefoundationspac.org","3600","CNAME","email.secureserver.net"
+"futurefoundationspac.org","3600","MX","futurefoundationspac-org.mail.protection.outlook.com"
