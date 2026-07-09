@@ -1,0 +1,23 @@
+{
+  "series": "true-to-the-oath",
+  "series_title": "True to the Oath",
+  "disclaimer": "Educational initiative. Not affiliated with any government agency.",
+  "teasers": [
+    {
+      "id": "teaser_60s_ep01",
+      "title": "The Oath Is 40 Words",
+      "script": "Media/true-to-the-oath/01-scripts/teaser-60s-youtube-short.md",
+      "output": "Media/true-to-the-oath/04-vertical/teaser_60s_youtube_short.mp4",
+      "duration_sec": 58,
+      "platforms": {
+        "youtube_shorts": {
+          "video_id": "",
+          "published_at": "",
+          "title": "The Oath Is 40 Words. Who Holds Them Accountable? | True to the Oath"
+        },
+        "tiktok": { "post_id": "", "published_at": "" },
+        "facebook_reels": { "post_id": "", "published_at": "" }
+      }
+    }
+  ]
+}

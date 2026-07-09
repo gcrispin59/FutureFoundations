@@ -65,3 +65,8 @@ changelog
 
 # Local Netlify folder
 .netlify
+
+# Generated media build artifacts (masters committed separately if needed)
+Media/**/02-build/
+Media/**/04-vertical/*.mp4
+Media/**/04-vertical/*.mov
