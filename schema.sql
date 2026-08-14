@@ -1,5 +1,6 @@
--- Future Foundations Database Schema
--- Run this after getting your NETLIFY_DATABASE_URL
+-- Future Foundations PAC Database Schema
+-- Civic covenant platform: True to the Oath, Political Candidate Covenant
+-- MAGGie and ARTI Scale are separate products (see SEPARATION.md)
 
 -- Core Projects Table
 CREATE TABLE projects (
@@ -13,44 +14,7 @@ CREATE TABLE projects (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Users/Individuals in the system
-CREATE TABLE individuals (
-    id SERIAL PRIMARY KEY,
-    user_id VARCHAR(100) UNIQUE, -- external auth system ID
-    email VARCHAR(255),
-    anonymous_id VARCHAR(100), -- for privacy-preserving tracking
-    agency_score DECIMAL(5,2),
-    authenticity_index DECIMAL(5,2),
-    resiliency_rating DECIMAL(5,2),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- MAGGie - Individual Responsibility Data
-CREATE TABLE individual_assessments (
-    id SERIAL PRIMARY KEY,
-    individual_id INTEGER REFERENCES individuals(id),
-    assessment_type VARCHAR(50), -- 'agency', 'journey', 'resiliency'
-    assessment_data JSONB,
-    score DECIMAL(5,2),
-    assessment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Journey Mapping
-CREATE TABLE journeys (
-    id SERIAL PRIMARY KEY,
-    individual_id INTEGER REFERENCES individuals(id),
-    journey_name VARCHAR(200),
-    goals JSONB,
-    milestones JSONB,
-    progress_metrics JSONB,
-    adaptive_adjustments JSONB,
-    status VARCHAR(20) DEFAULT 'active',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Political Candidates (for PCC)
+-- Political Candidates (PCC)
 CREATE TABLE candidates (
     id SERIAL PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
@@ -66,7 +30,7 @@ CREATE TABLE candidates (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- True to the Oath - Accountability Tracking
+-- True to the Oath — Accountability Tracking
 CREATE TABLE oath_assessments (
     id SERIAL PRIMARY KEY,
     candidate_id INTEGER REFERENCES candidates(id),
@@ -78,24 +42,9 @@ CREATE TABLE oath_assessments (
     assessment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ARTI Scale - Threat Assessment
-CREATE TABLE arti_assessments (
-    id SERIAL PRIMARY KEY,
-    assessment_scope VARCHAR(100), -- 'individual', 'institutional', 'systemic'
-    target_id INTEGER, -- references individuals, candidates, or institutions
-    target_type VARCHAR(50), -- 'individual', 'candidate', 'institution'
-    threat_level INTEGER CHECK (threat_level >= 0 AND threat_level <= 10),
-    threat_categories JSONB,
-    risk_factors JSONB,
-    mitigation_strategies JSONB,
-    monitoring_alerts JSONB,
-    assessment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- AI-Human Interaction Tracking
+-- AI-Human Interaction Tracking (TTO / PCC contexts)
 CREATE TABLE ai_interactions (
     id SERIAL PRIMARY KEY,
-    individual_id INTEGER REFERENCES individuals(id),
     project_context VARCHAR(50),
     interaction_type VARCHAR(50), -- 'assistance', 'assessment', 'recommendation'
     ai_persona VARCHAR(50),
@@ -118,11 +67,11 @@ CREATE TABLE project_relationships (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Shared Metrics Across Projects
+-- Shared Metrics Across PAC Programs
 CREATE TABLE shared_metrics (
     id SERIAL PRIMARY KEY,
     metric_name VARCHAR(100) NOT NULL,
-    metric_type VARCHAR(50), -- 'human_flourishing', 'agency_preservation', 'institutional_integrity'
+    metric_type VARCHAR(50), -- 'institutional_integrity', 'covenant_compliance'
     calculation_method TEXT,
     current_value DECIMAL(10,4),
     historical_values JSONB,
@@ -134,7 +83,7 @@ CREATE TABLE shared_metrics (
 CREATE TABLE intervention_points (
     id SERIAL PRIMARY KEY,
     project_context VARCHAR(50),
-    intervention_type VARCHAR(100), -- 'persona_selection', 'feedback_calibration', 'risk_threshold'
+    intervention_type VARCHAR(100), -- 'persona_selection', 'feedback_calibration'
     trigger_conditions JSONB,
     human_choice_preservation JSONB,
     automated_vs_human_control VARCHAR(20), -- 'automated', 'human_in_loop', 'human_controlled'
@@ -159,14 +108,14 @@ CREATE TABLE feedback_loops (
 CREATE TABLE anonymized_insights (
     id SERIAL PRIMARY KEY,
     insight_category VARCHAR(100),
-    aggregation_level VARCHAR(50), -- 'individual', 'cohort', 'population'
+    aggregation_level VARCHAR(50), -- 'cohort', 'population'
     insight_data JSONB,
     privacy_protection_level VARCHAR(20), -- 'k_anonymous', 'differential_private', 'federated'
     contributing_projects TEXT[],
     generated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- System Health and Risk Monitoring
+-- System Health Monitoring
 CREATE TABLE system_health (
     id SERIAL PRIMARY KEY,
     component VARCHAR(100), -- specific project or integration point
@@ -179,30 +128,19 @@ CREATE TABLE system_health (
 );
 
 -- Indexes for Performance
-CREATE INDEX idx_individuals_anonymous_id ON individuals(anonymous_id);
-CREATE INDEX idx_individual_assessments_type_date ON individual_assessments(assessment_type, assessment_date);
 CREATE INDEX idx_candidates_election_cycle ON candidates(election_cycle);
-CREATE INDEX idx_arti_assessments_threat_level ON arti_assessments(threat_level);
 CREATE INDEX idx_ai_interactions_project_context ON ai_interactions(project_context);
 CREATE INDEX idx_shared_metrics_type ON shared_metrics(metric_type);
 CREATE INDEX idx_feedback_loops_projects ON feedback_loops(source_project, target_project);
 
--- Insert Core Projects
+-- Insert Core PAC Projects
 INSERT INTO projects (name, slug, description, parent_project_id) VALUES
-('Future Foundations', 'future-foundations', 'Root project for AI safety and human flourishing', NULL),
+('Future Foundations PAC', 'future-foundations', 'Civic covenant and institutional integrity platform', NULL),
 ('True to the Oath', 'true-to-oath', 'Institutional integrity and accountability framework', 1),
-('Political Candidate Covenant', 'political-candidate-covenant', 'Candidate assessment and voter matching system', 1),
-('Individual Responsibility MAGGie', 'individual-responsibility', 'Personal empowerment and decision-making tools', 1),
-('Agency', 'agency', 'Self-identity and wellbeing systems', 4),
-('Journey', 'journey', 'Personal mapping and goal management', 5),
-('Resiliency', 'resiliency', 'Stress systems and antifragility development', 5),
-('ARTI Scale', 'arti-scale', 'AI threat assessment and risk modeling', 1),
-('AI for Better Humanity', 'ai-better-humanity', 'Human-AI collaboration and ethical safeguards', 8);
+('Political Candidate Covenant', 'political-candidate-covenant', 'Candidate assessment and voter matching system', 1);
 
 -- Insert Initial Shared Metrics
 INSERT INTO shared_metrics (metric_name, metric_type, calculation_method, current_value, projects_contributing) VALUES
-('Human Flourishing Index', 'human_flourishing', 'Aggregate of agency, authenticity, and wellbeing scores', 0.0, ARRAY['individual-responsibility', 'agency', 'journey']),
-('Agency Preservation Score', 'agency_preservation', 'Individual sovereignty maintenance across all interactions', 0.0, ARRAY['agency', 'ai-better-humanity']),
 ('Institutional Integrity Rating', 'institutional_integrity', 'Trust and accountability metrics for governance', 0.0, ARRAY['true-to-oath', 'political-candidate-covenant']),
-('Risk Delta Tracking', 'risk_assessment', 'Change in existential threat levels over time', 0.0, ARRAY['arti-scale']),
-('Positive-Sum Indicator', 'system_health', 'Frequency of win-win outcomes across all projects', 0.0, ARRAY['future-foundations']);
+('Covenant Compliance Index', 'covenant_compliance', 'Aggregate adherence to renewal covenant tiers', 0.0, ARRAY['true-to-oath', 'political-candidate-covenant']),
+('Positive-Sum Indicator', 'system_health', 'Frequency of win-win outcomes across PAC programs', 0.0, ARRAY['future-foundations']);

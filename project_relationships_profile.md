@@ -1,132 +1,107 @@
-# Future Foundations Project Ecosystem - Relationship Knowledge Base
+# Future Foundations Project Ecosystem — Relationship Knowledge Base
 
 ## Core Architecture Principles
 
 ### Strategic Integration Framework
-The Future Foundations ecosystem operates on **multi-agent systems theory** with each project serving as both autonomous units and collaborative nodes. The architecture implements **cascading feedback loops** where insights from individual-level projects (MAGGie) inform institutional-level assessments (True to the Oath, Political Candidate Covenant) while threat assessment (ARTI Scale) provides risk context across all domains.
+
+The Future Foundations PAC operates as a **civic covenant platform** focused on institutional integrity and democratic accountability. The architecture connects **True to the Oath** and the **Political Candidate Covenant** through shared virtue metrics, transparency portals, and covenant-bound reform tracking.
+
+**MAGGie Pro** and **ARTI Scale** are separate standalone products — see [SEPARATION.md](./SEPARATION.md).
 
 ### Cross-Project Synergy Patterns
 
 ## Project Relationship Matrix
 
 ### 1. True to the Oath ↔ Political Candidate Covenant
+
 **Relationship Type**: Institutional Integrity Loop
+
 - **TTO → PCC**: Oath assessment frameworks provide foundational integrity metrics for candidate evaluation
 - **PCC → TTO**: Electoral analytics reveal systemic integrity gaps requiring oath refinement
 - **Shared Components**: Transparency portals, accountability chains, virtue metrics
-- **Coordination Points**: 
+- **Coordination Points**:
   - Integrity tracking systems share data models
   - Voter matching algorithms incorporate oath-based virtue scores
   - Policy alignment uses oath framework for consistency checks
 
-### 2. Individual Responsibility (MAGGie) ↔ Agency
-**Relationship Type**: Personal Sovereignty Amplification
-- **MAGGie → Agency**: Decision-making tools feed into self-identity discovery processes
-- **Agency → MAGGie**: Journey mapping and resiliency building strengthen personal empowerment
-- **Shared Components**: Authenticity restoration, wellbeing inoculation systems
-- **Coordination Points**:
-  - Personal mapping integrates with decision-making frameworks
-  - Resiliency metrics inform empowerment strategies
-  - Adaptive direction mechanisms use agency feedback
+### 2. American Renewal Covenant ↔ TTO / PCC
 
-### 3. ARTI Scale ↔ All Projects
-**Relationship Type**: Existential Risk Monitoring Overlay
-- **ARTI → TTO**: Threat assessment informs oath framework updates for AI-era governance
-- **ARTI → PCC**: Risk modeling identifies candidate positions on AI safety/human flourishing
-- **ARTI → MAGGie/Agency**: Monitoring systems protect individual sovereignty from AI manipulation
-- **Coordination Points**:
-  - Risk delta identification across all human-AI interaction points
-  - Positive-sum design principles embedded in all project frameworks
-  - Ethical safeguards synchronized across institutional and individual levels
+**Relationship Type**: Reform Commitment Pipeline
 
-### 4. Journey ↔ Political Systems
-**Relationship Type**: Personal-to-Political Pipeline
-- **Journey → PCC**: Personal goal management and progress tracking inform civic engagement patterns
-- **Journey → TTO**: Adaptive direction capabilities model how individuals navigate institutional trust
+- **Covenant → TTO**: Tier commitments define measurable institutional reform obligations
+- **Covenant → PCC**: Candidate tiers map to endorsement and accountability levels
 - **Coordination Points**:
-  - Personal mapping data (anonymized) improves voter-candidate matching
-  - Goal management frameworks adapt to political cycle timelines
-  - Progress tracking includes civic participation metrics
-
-### 5. Resiliency ↔ Risk Systems
-**Relationship Type**: Antifragility Network
-- **Resiliency → ARTI**: Stress systems and recovery capacity inform threat mitigation strategies
-- **Resiliency → TTO/PCC**: Antifragility synthesis strengthens institutional resilience
-- **Coordination Points**:
-  - Risk mitigation strategies scale from individual to institutional levels
-  - Recovery capacity models inform systemic intervention points
-  - Stress testing protocols shared across all projects
+  - Tier I–IV reform pledges feed oath assessment criteria
+  - Progress tracking links covenant compliance to virtue metrics
 
 ## Strategic Intervention Points
 
 ### Free Will Preservation Nodes
+
 Critical junctures where human agency can be preserved or compromised:
-1. **Persona Selection Algorithms** (across all projects)
-2. **Feedback Loop Calibration** (MAGGie ↔ Agency)
-3. **Risk Threshold Settings** (ARTI monitoring)
-4. **Transparency vs. Privacy Balance** (TTO ↔ PCC)
+
+1. **Persona Selection Algorithms** (TTO / PCC AI-assisted tools)
+2. **Transparency vs. Privacy Balance** (TTO ↔ PCC)
+3. **Covenant pledge verification** (human-controlled, not automated scoring alone)
 
 ### Positive-Sum Amplification Mechanisms
+
 Systems designed to enhance rather than manipulate human choice:
-1. **Agency Amplification** through AI collaboration
-2. **Collective Intelligence** via candidate-voter matching
-3. **Emergent Virtue** through oath-based accountability
-4. **Adaptive Resilience** via personalized journey mapping
+
+1. **Collective Intelligence** via candidate-voter matching
+2. **Emergent Virtue** through oath-based accountability
+3. **Civic education** through True to the Oath media and research
 
 ## Cross-Project Coordination Protocols
 
 ### Data Flow Architecture
+
 ```
-Individual Level (MAGGie/Agency) 
-    ↓ (anonymized insights)
-Institutional Level (TTO/PCC)
-    ↓ (systemic patterns)
-Risk Assessment Level (ARTI)
-    ↓ (threat mitigation)
-Back to Individual Level (enhanced sovereignty)
+Citizen / Voter
+    ↓
+Political Candidate Covenant (matching, assessment)
+    ↓
+True to the Oath (integrity, virtue metrics)
+    ↓
+American Renewal Covenant (reform tiers, compliance)
 ```
 
 ### Shared Metrics Framework
-1. **Human Flourishing Index**: Aggregate measure across all projects
-2. **Agency Preservation Score**: Individual sovereignty maintenance
-3. **Institutional Integrity Rating**: Trust and accountability metrics
-4. **Risk Delta Tracking**: Change in existential threat levels
-5. **Positive-Sum Indicator**: Win-win outcome frequency
+
+1. **Institutional Integrity Rating**: Trust and accountability metrics
+2. **Covenant Compliance Index**: Adherence to renewal covenant tiers
+3. **Positive-Sum Indicator**: Win-win outcome frequency across PAC programs
 
 ### Integration Testing Protocols
+
 - **Authenticity Stress Tests**: Ensure no project undermines genuine self-expression
 - **Agency Preservation Audits**: Verify human choice remains paramount
-- **Manipulation Resistance Checks**: Validate defensive mechanisms
-- **Cascade Failure Analysis**: Model systemic breakdown scenarios
-- **Emergence Monitoring**: Track unexpected beneficial behaviors
+- **Manipulation Resistance Checks**: Validate defensive mechanisms in voter-facing tools
+- **Transparency Mandates**: All AI-assisted decision-making must be explainable
 
 ## Deployment Strategy Coordination
 
 ### Persona Selection Matrix
-Different projects may require different persona deployments:
-- **Analytical/Strategic**: ARTI Scale, risk modeling components
-- **Empathetic/Supportive**: MAGGie, Agency, Journey components  
-- **Institutional/Professional**: TTO, PCC, governance components
-- **Adaptive/Hybrid**: Cross-project coordination, integration points
 
-### Automated vs. Human-in-Loop Decision Points
-- **Automated**: Routine data processing, pattern recognition, metric tracking
-- **Human-in-Loop**: Persona selection, threshold adjustments, intervention strategies
-- **Human-Controlled**: Core value alignment, strategic direction, ethical boundaries
+| Project Context | Interaction Type | Recommended Persona |
+|-----------------|------------------|---------------------|
+| TTO / PCC | Governance | Institutional-Professional |
+| Cross-Project | Integration | Adaptive-Hybrid |
 
-## Risk Mitigation Across Projects
+## Risk Mitigation
 
 ### Convergence Threat Monitoring
-Watch for signs that projects begin optimizing for metrics rather than human flourishing:
+
+Watch for signs that metrics optimization replaces human flourishing:
+
 - Goodhart's Law violations (gaming of metrics)
 - Mission drift toward efficiency over authenticity
-- Emergent manipulative behaviors in AI components
 - Erosion of human agency in favor of "optimization"
 
 ### Failsafe Mechanisms
-- **Circuit Breakers**: Automatic shutdown triggers for concerning patterns
-- **Human Override**: Always-available manual control mechanisms  
-- **Transparency Mandates**: All AI decision-making must be explainable
-- **Authenticity Anchors**: Regular return to core human values assessment
 
-This knowledge base should be referenced and updated as projects evolve and new integration patterns emerge. The goal is maintaining beneficial coordination while preserving the sovereignty and authenticity that defines human flourishing.
+- **Human Override**: Always-available manual control mechanisms
+- **Transparency Mandates**: All AI decision-making must be explainable
+- **Authenticity Anchors**: Regular return to core civic values assessment
+
+This knowledge base should be referenced and updated as PAC programs evolve. The goal is maintaining beneficial coordination while preserving the sovereignty and authenticity that defines democratic participation.

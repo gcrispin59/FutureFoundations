@@ -264,8 +264,7 @@ async function createIndexHtml() {
         <div>
             <span class="metric">True to the Oath</span>
             <span class="metric">Political Candidate Covenant</span>
-            <span class="metric">Individual Responsibility (MAGGie)</span>
-            <span class="metric">ARTI Scale</span>
+            <span class="metric">American Renewal Covenant</span>
         </div>
         <p>Integrated multi-project system for preserving human sovereignty in an AI-accelerated world.</p>
     </div>
@@ -370,9 +369,9 @@ async function createIndexHtml() {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        project_context: 'agency',
+                        project_context: 'true-to-oath',
                         user_context: { expertise_level: 'beginner' },
-                        interaction_type: 'identity-discovery'
+                        interaction_type: 'oath-assessment'
                     })
                 });
                 const data = await response.json();

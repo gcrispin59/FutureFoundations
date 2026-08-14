@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support the Mission | Future Foundations PAC</title>
+  <meta name="description" content="Optional support for civic education and institutional integrity through Future Foundations PAC.">
+  <link rel="stylesheet" href="/assets/css/ff-system.css">
+</head>
+<body>
+  <div id="ff-nav"></div>
+  <div id="ff-crumbs"></div>
+
+  <main class="ff-content">
+    <h1>Support the mission</h1>
+    <p class="ff-lead">95% of what we do is civic education. If this work matters to you, optional support keeps it independent.</p>
+    <p class="ff-disclaimer">Contributions to Future Foundations PAC are not tax-deductible. Not affiliated with any government agency. Support is offered through <strong>covenant fellowship</strong> — not a commercial contract or corporate membership. Payments processed securely by Square.</p>
+
+    <div id="tiers" class="ff-tier-list">
+<!-- DONATE_TIERS:START -->
+      <a class="ff-tier-row" href="https://square.link/u/7PcikvCi?utm_source=site&utm_medium=donate" target="_blank" rel="noopener">
+        <div><strong>Supporter</strong><br><span class="ff-muted">Secure checkout via Square</span></div>
+        <span class="amount">$5</span>
+      </a>
+      <a class="ff-tier-row" href="https://square.link/u/XvJEcsFE?utm_source=site&utm_medium=donate" target="_blank" rel="noopener">
+        <div><strong>Defender</strong><br><span class="ff-muted">Secure checkout via Square</span></div>
+        <span class="amount">$25</span>
+      </a>
+      <a class="ff-tier-row" href="https://square.link/u/F4CzNw61?utm_source=site&utm_medium=donate" target="_blank" rel="noopener">
+        <div><strong>Guardian</strong><br><span class="ff-muted">Secure checkout via Square</span></div>
+        <span class="amount">$50</span>
+      </a>
+      <a class="ff-tier-row" href="https://square.link/u/FB7ZvMK7?utm_source=site&utm_medium=donate" target="_blank" rel="noopener">
+        <div><strong>Protector</strong><br><span class="ff-muted">Secure checkout via Square</span></div>
+        <span class="amount">$100</span>
+      </a>
+<!-- DONATE_TIERS:END -->
+    </div>
+
+    <p class="ff-muted">You can also create a link in <a href="https://app.squareup.com/dashboard" target="_blank" rel="noopener">Square Dashboard</a> → Payment links → Accept a donation.</p>
+    <p class="ff-muted">Powered by Square · <a href="https://app.squareup.com/dashboard" target="_blank" rel="noopener">Manage payments</a></p>
+  </main>
+
+  <div id="ff-footer"></div>
+
+  <script src="/assets/js/ff-shell.js"></script>
+  <script>
+    FFShell.mount();
+    var params = new URLSearchParams(location.search);
+    var campaign = params.get("campaign");
+    if (campaign) {
+      document.querySelectorAll("#tiers a.ff-tier-row").forEach(function (a) {
+        var u = new URL(a.href);
+        u.searchParams.set("utm_campaign", campaign);
+        a.href = u.toString();
+      });
+    }
+  </script>
+</body>
+</html>

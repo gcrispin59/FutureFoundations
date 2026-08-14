@@ -44,21 +44,15 @@ export default async function handler(request, context) {
       case 'metrics':
         responseData = [
           {
-            metric_name: 'Human Flourishing Index',
-            metric_type: 'human_flourishing',
-            current_value: 7.5,
-            last_calculated: new Date().toISOString()
-          },
-          {
-            metric_name: 'Agency Preservation Score',
-            metric_type: 'agency_preservation',
-            current_value: 8.2,
-            last_calculated: new Date().toISOString()
-          },
-          {
             metric_name: 'Institutional Integrity Rating',
             metric_type: 'institutional_integrity',
             current_value: 6.8,
+            last_calculated: new Date().toISOString()
+          },
+          {
+            metric_name: 'Covenant Compliance Index',
+            metric_type: 'covenant_compliance',
+            current_value: 5.2,
             last_calculated: new Date().toISOString()
           }
         ];
@@ -72,11 +66,7 @@ export default async function handler(request, context) {
           // Simple persona selection logic
           let recommendedPersona = 'adaptive-hybrid';
           
-          if (project_context === 'arti-scale') {
-            recommendedPersona = 'analytical-strategic';
-          } else if (project_context === 'agency' || project_context === 'individual-responsibility') {
-            recommendedPersona = 'empathetic-supportive';
-          } else if (project_context === 'true-to-oath' || project_context === 'political-candidate-covenant') {
+          if (project_context === 'true-to-oath' || project_context === 'political-candidate-covenant') {
             recommendedPersona = 'institutional-professional';
           }
           
