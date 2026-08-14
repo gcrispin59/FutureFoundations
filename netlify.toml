@@ -18,3 +18,15 @@
 
 [context.branch-deploy.environment]
   FUTURE_FOUNDATIONS_ENV = "branch"
+
+# Square donation API — set SQUARE_* in Netlify UI (see Media/donations/SQUARE_SETUP.md)
+
+[[redirects]]
+  from = "/api/square-donate"
+  to = "/.netlify/functions/square-donate"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200

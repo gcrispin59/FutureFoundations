@@ -25,26 +25,37 @@ OUTPUT_FILE = MEDIA_ROOT / "04-vertical" / "teaser_60s_youtube_short.mp4"
 
 WIDTH, HEIGHT = 1080, 1920
 FPS = 30
-VOICE = "en-US-GuyNeural"
+# Forceful, deep delivery (BrianNeural — reliable via edge-tts)
+VOICE = "en-US-BrianNeural"
 
-VO_SCRIPT = """
-The oath is forty words.
-Every federal official swears it, to support and defend the Constitution.
-But when institutions drift, who measures the gap?
-True to the Oath is an institutional integrity framework, tracking accountability, transparency, and virtue in public service.
-Oath assessments. Virtue metrics. Accountability chains, for citizens who refuse to look away.
-Veterans. Former law enforcement. Teachers. Neighbors. People who still believe the oath means something.
-Stand true to the oath. Link in bio.
-""".strip()
+# (line, pause_seconds_after) — direct we / I / you cadence
+VO_SEGMENTS: list[tuple[str, float]] = [
+    ("You know the oath. Forty words.", 0.55),
+    ("We watch every official swear it.", 0.28),
+    ("To support and defend the Constitution.", 0.65),
+    ("But when institutions drift.", 0.35),
+    ("I have to ask you — who holds them accountable?", 0.70),
+    ("We built True to the Oath.", 0.32),
+    ("An integrity framework you can see.", 0.28),
+    ("We track accountability, transparency, and virtue — in public service.", 0.60),
+    ("Oath assessments you can verify.", 0.20),
+    ("Virtue metrics we measure together.", 0.20),
+    ("Accountability chains we refuse to break.", 0.40),
+    ("For citizens like you who will not look away.", 0.60),
+    ("We are veterans, law enforcement, teachers, neighbors.", 0.40),
+    ("I still believe the oath means something. Do you?", 0.70),
+    ("Stand with us. True to the oath.", 0.45),
+    ("futurefoundationspac.org", 0.0),
+]
 
 # Scene timing as fraction of total audio (must sum to 1.0)
 SCENES = [
-    {"headline": "THE OATH IS", "sub": "40 WORDS.", "bg": "Civilization.jpg", "weight": 0.10},
-    {"headline": "SUPPORT & DEFEND", "sub": "the Constitution", "bg": "Civilization2.jpg", "weight": 0.14},
-    {"headline": "WHO HOLDS THEM", "sub": "ACCOUNTABLE?", "bg": "Civilization3.jpg", "weight": 0.12},
-    {"headline": "TRUE TO", "sub": "THE OATH", "bg": "Civilization4.jpg", "weight": 0.16},
-    {"headline": "ACCOUNTABILITY", "sub": "CHAINS", "bg": "Civilization.jpg", "weight": 0.18},
-    {"headline": "STAND TRUE", "sub": "TO THE OATH", "bg": "Civilization2.jpg", "weight": 0.16},
+    {"headline": "YOU KNOW", "sub": "THE OATH", "bg": "Civilization.jpg", "weight": 0.10},
+    {"headline": "WE WATCH", "sub": "THEY SWEAR IT", "bg": "Civilization2.jpg", "weight": 0.14},
+    {"headline": "I ASK YOU", "sub": "WHO'S ACCOUNTABLE?", "bg": "Civilization3.jpg", "weight": 0.12},
+    {"headline": "WE BUILT", "sub": "TRUE TO THE OATH", "bg": "Civilization4.jpg", "weight": 0.16},
+    {"headline": "WE TRACK", "sub": "ACCOUNTABILITY", "bg": "Civilization.jpg", "weight": 0.18},
+    {"headline": "STAND WITH US", "sub": "TRUE TO THE OATH", "bg": "Civilization2.jpg", "weight": 0.16},
     {"headline": "futurefoundationspac.org", "sub": "#TrueToTheOath", "bg": "Civilization3.jpg", "weight": 0.14},
 ]
 
@@ -81,19 +92,34 @@ def load_background(name: str) -> Image.Image:
         top = (h - new_h) // 2
         img = img.crop((0, top, w, top + new_h))
     img = img.resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS)
-    img = ImageEnhance.Brightness(img).enhance(0.45)
+    img = ImageEnhance.Brightness(img).enhance(0.38)
+    img = ImageEnhance.Contrast(img).enhance(1.12)
     return img
+
+
+def draw_text_with_shadow(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    text: str,
+    font: ImageFont.FreeTypeFont | ImageFont.ImageFont,
+    fill: tuple[int, int, int, int],
+    anchor: str = "mm",
+) -> None:
+    """Draw headline text with a subtle shadow for readability."""
+    x, y = xy
+    draw.text((x + 3, y + 3), text, fill=(0, 0, 0, 180), font=font, anchor=anchor)
+    draw.text(xy, text, fill=fill, font=font, anchor=anchor)
 
 
 def render_frame(scene: dict, index: int) -> Path:
     """Render a single vertical frame with headline overlay."""
     img = load_background(scene["bg"])
-    overlay = Image.new("RGBA", (WIDTH, HEIGHT), (13, 31, 60, 160))
+    overlay = Image.new("RGBA", (WIDTH, HEIGHT), (8, 20, 45, 185))
     img = Image.alpha_composite(img.convert("RGBA"), overlay)
     draw = ImageDraw.Draw(img)
 
-    title_font = load_font(78, bold=True)
-    sub_font = load_font(56, bold=True)
+    title_font = load_font(82, bold=True)
+    sub_font = load_font(58, bold=True)
     small_font = load_font(36, bold=False)
 
     headline = scene["headline"]
@@ -109,8 +135,12 @@ def render_frame(scene: dict, index: int) -> Path:
             anchor="mm",
         )
 
-    draw.text((WIDTH // 2, HEIGHT // 2 - 80), headline, fill=(255, 255, 255, 255), font=title_font, anchor="mm")
-    draw.text((WIDTH // 2, HEIGHT // 2 + 40), sub, fill=(215, 63, 63, 255), font=sub_font, anchor="mm")
+    draw_text_with_shadow(
+        draw, (WIDTH // 2, HEIGHT // 2 - 80), headline, title_font, (255, 255, 255, 255)
+    )
+    draw_text_with_shadow(
+        draw, (WIDTH // 2, HEIGHT // 2 + 40), sub, sub_font, (230, 55, 55, 255)
+    )
 
     # Brand bar
     draw.rectangle([(0, HEIGHT - 140), (WIDTH, HEIGHT)], fill=(26, 68, 128, 230))
@@ -121,11 +151,67 @@ def render_frame(scene: dict, index: int) -> Path:
     return out
 
 
-async def generate_voiceover() -> Path:
-    """Synthesize narration with edge-tts."""
+async def generate_voiceover(ffmpeg: str) -> Path:
+    """Synthesize forceful narration with deliberate pauses between beats."""
+    seg_dir = BUILD_DIR / "segments"
+    seg_dir.mkdir(parents=True, exist_ok=True)
+    concat_lines: list[str] = []
+
+    for i, (text, pause) in enumerate(VO_SEGMENTS):
+        seg_path = seg_dir / f"seg_{i:02d}.mp3"
+        communicate = edge_tts.Communicate(
+            text,
+            VOICE,
+            rate="-12%",
+            volume="+14%",
+        )
+        await communicate.save(str(seg_path))
+        concat_lines.append(f"file '{seg_path.as_posix()}'")
+
+        if pause > 0:
+            silence_path = seg_dir / f"pause_{i:02d}.mp3"
+            subprocess.run(
+                [
+                    ffmpeg,
+                    "-y",
+                    "-f",
+                    "lavfi",
+                    "-i",
+                    "anullsrc=r=24000:cl=mono",
+                    "-t",
+                    f"{pause:.3f}",
+                    "-c:a",
+                    "libmp3lame",
+                    "-q:a",
+                    "6",
+                    str(silence_path),
+                ],
+                check=True,
+                capture_output=True,
+            )
+            concat_lines.append(f"file '{silence_path.as_posix()}'")
+
+    concat_list = seg_dir / "audio_concat.txt"
+    concat_list.write_text("\n".join(concat_lines), encoding="utf-8")
     audio_path = BUILD_DIR / "voiceover.mp3"
-    communicate = edge_tts.Communicate(VO_SCRIPT, VOICE, rate="-5%")
-    await communicate.save(str(audio_path))
+    subprocess.run(
+        [
+            ffmpeg,
+            "-y",
+            "-f",
+            "concat",
+            "-safe",
+            "0",
+            "-i",
+            str(concat_list),
+            "-c:a",
+            "libmp3lame",
+            "-q:a",
+            "4",
+            str(audio_path),
+        ],
+        check=True,
+    )
     return audio_path
 
 
@@ -246,7 +332,7 @@ async def main() -> None:
     (BUILD_DIR / "frames").mkdir(parents=True, exist_ok=True)
 
     print("Generating voiceover...")
-    audio_path = await generate_voiceover()
+    audio_path = await generate_voiceover(ffmpeg)
     duration = probe_duration(ffmpeg, audio_path)
     print(f"Audio duration: {duration:.1f}s")
 

@@ -70,3 +70,5 @@ changelog
 Media/**/02-build/
 Media/**/04-vertical/*.mp4
 Media/**/04-vertical/*.mov
+Media/true-to-the-oath/youtube-oauth-client.json
+**/client_secret*.json

@@ -21,21 +21,21 @@
 
 ---
 
-## FULL VO SCRIPT (single take)
+## FULL VO SCRIPT (v3 — we / I / you, forceful cadence)
 
-> The oath is forty words.
+> You know the oath. Forty words.
 >
-> Every federal official swears it — to support and defend the Constitution.
+> We watch every official swear it — to support and defend the Constitution.
 >
-> But when institutions drift… who measures the gap?
+> But when institutions drift… **I have to ask you — who holds them accountable?**
 >
-> **True to the Oath** is an institutional integrity framework — tracking accountability, transparency, and virtue in public service.
+> **We built True to the Oath.** An integrity framework you can see. We track accountability, transparency, and virtue in public service.
 >
-> Oath assessments. Virtue metrics. Accountability chains — for citizens who refuse to look away.
+> Oath assessments you can verify. Virtue metrics we measure together. Accountability chains we refuse to break — for citizens like **you** who will not look away.
 >
-> Veterans. Former law enforcement. Teachers. Neighbors. People who still believe the oath means something.
+> We are veterans, law enforcement, teachers, neighbors. **I** still believe the oath means something. **Do you?**
 >
-> Stand true to the oath. Link in bio.
+> **Stand with us.** True to the oath. futurefoundationspac.org
 
 ---
 

@@ -1,0 +1,34 @@
+{
+  "provider": "square",
+  "redirect_url": "https://futurefoundationspac.org/donate/thank-you",
+  "tiers": [
+    {
+      "id": "supporter_5",
+      "label": "Supporter",
+      "amount_usd": 5,
+      "url": "https://square.link/u/7PcikvCi",
+      "order_id": "H0xV7Di1FA6hg6FGM4DyNOqzaLSZY"
+    },
+    {
+      "id": "defender_25",
+      "label": "Defender",
+      "amount_usd": 25,
+      "url": "https://square.link/u/XvJEcsFE",
+      "order_id": "DYoRyoidcgmbTo2tsOAXr4Ls2L8YY"
+    },
+    {
+      "id": "guardian_50",
+      "label": "Guardian",
+      "amount_usd": 50,
+      "url": "https://square.link/u/F4CzNw61",
+      "order_id": "XSSklnKX7cJXovPfkvonZJGuOp8YY"
+    },
+    {
+      "id": "protector_100",
+      "label": "Protector",
+      "amount_usd": 100,
+      "url": "https://square.link/u/FB7ZvMK7",
+      "order_id": "TUcO4pHulq3hpfB2FXl4fGwuDDWZY"
+    }
+  ]
+}
