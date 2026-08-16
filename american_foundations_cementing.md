@@ -12,6 +12,18 @@ The **American Renewal Covenant** represents a revolutionary approach to politic
 ### Core Principle
 **Aspirational America**: The understanding that American democratic institutions represent humanity's highest political aspirations, deserving stewards who will sacrifice personal advancement to preserve and renew these foundations for future generations.
 
+### Covenant, Not Contract
+
+Future Foundations organizes citizens and candidates through **covenant** — voluntary, solemn mutual obligations among free persons — not commercial **contracts** that bind artificial corporate persons.
+
+| | **Contract** (rejected frame) | **Covenant** (our frame) |
+|---|------------------------------|--------------------------|
+| **Parties** | Corporations, vendors, entities with limited constitutional personhood | Citizens, candidates, stewards acting in personal honor |
+| **Enforcement** | Courts, damages, corporate charter limits | Oath, elections, public virtue metrics, self-chosen consequences |
+| **Freedom** | Bounded by fiduciary duty and corporate political constraints | Action flows from constitutional oath and civic fellowship beyond corporate form |
+
+The Hybrid PAC satisfies FEC compliance; the **mission** is carried by covenant among people — preserving freedom of action that corporate structures cannot assume or fully express.
+
 ---
 
 ## Existing Aligned Pledges (Building Blocks)
@@ -72,7 +84,7 @@ The **American Renewal Covenant** represents a revolutionary approach to politic
 - Annual public accountability reports
 
 **Example Pledge:**
-> *"I commit to implementing digital transparency platforms for all legislative processes within 18 months and establishing citizen oversight committees with real authority within 24 months. Failure to achieve both goals results in returning all campaign contributions over $200 to donors and stepping down from committee leadership positions."*
+> *"I covenant to implement digital transparency platforms for all legislative processes within 18 months and to establish citizen oversight committees with real authority within 24 months. Failure to achieve both goals results in returning all campaign contributions over $200 to donors and stepping down from committee leadership positions."*
 
 **Candidate Benefits:**
 - Substantial PAC support (75% of maximum)
@@ -112,7 +124,7 @@ The **American Renewal Covenant** represents a revolutionary approach to politic
 - Public commitment documentation
 
 **Example Pledge:**
-> *"I commit to reading every bill before voting, publishing my reasoning for major votes within 24 hours, and hosting quarterly town halls with open Q&A. Failure to maintain these standards results in public acknowledgment and commitment to improvement plans."*
+> *"I covenant to read every bill before voting, to publish my reasoning for major votes within 24 hours, and to host quarterly town halls with open Q&A. Failure to maintain these standards results in public acknowledgment and a covenant improvement plan."*
 
 **Candidate Benefits:**
 - Entry-level PAC support (25% of maximum)
@@ -205,7 +217,7 @@ Establish Covenant as standard political credibility measure:
 
 ---
 
-*"The American Renewal Covenant transforms political promises into enforceable contracts with democracy itself. When candidates stake their careers on constitutional commitments, we rebuild the foundations of trust between citizens and their representatives."*
+*"The American Renewal Covenant transforms political promises into solemn covenants with the American people — not commercial contracts constrained by corporate personhood. When candidates stake their careers on constitutional commitments, we rebuild the foundations of trust between citizens and their representatives."*
 
 ---
 

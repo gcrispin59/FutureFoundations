@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SpecialDeputyRegistration>
+  <!-- Personal Information -->
+  <firstName>John</firstName>
+  <lastName>Doe</lastName>
+  <dob>1980-01-01</dob>
+  <ssn>1234</ssn> <!-- Last 4 digits only -->
+  <citizenship>yes</citizenship>
+  
+  <!-- Contact Information -->
+  <email>john.doe@example.com</email>
+  <phone>555-123-4567</phone>
+  <address>123 Main Street</address>
+  <city>Washington</city>
+  <state>DC</state>
+  <zip>20001</zip>
+  
+  <!-- Qualifications & Background -->
+  <lawEnforcement>yes</lawEnforcement>
+  <lawEnforcementAgency>DC Metropolitan Police Department</lawEnforcementAgency>
+  <lawEnforcementYears>5</lawEnforcementYears>
+  <lawEnforcementPosition>Patrol Officer</lawEnforcementPosition>
+  
+  <military>yes</military>
+  <militaryBranch>army</militaryBranch>
+  <militaryYears>4</militaryYears>
+  <militaryRank>E-5 Sergeant</militaryRank>
+  <militaryDischarge>honorable</militaryDischarge>
+  
+  <firearms>yes</firearms>
+  <firearmsType>Police Academy, NRA Certified Instructor</firearmsType>
+  <firearmsDate>2023-06-15</firearmsDate>
+  
+  <criminal>no</criminal>
+  <willingToTravel>yes</willingToTravel>
+  
+  <!-- Additional Information -->
+  <skills>Crisis negotiation, tactical operations, bilingual (English/Spanish), first aid certified</skills>
+  <reason>I wish to serve my country by assisting the U.S. Marshals Service in upholding federal law and ensuring court orders are properly executed. My background in both military and law enforcement has prepared me for this responsibility.</reason>
+  
+  <acknowledgment>true</acknowledgment>
+  <consent>true</consent>
+  
+  <!-- System Generated -->
+  <SubmissionDate>2025-03-17T14:30:22.123Z</SubmissionDate>
+  <SubmissionIP>192.168.1.1</SubmissionIP>
+  <RegistrationID>USMS-SD-2025-0001234</RegistrationID>
+</SpecialDeputyRegistration>

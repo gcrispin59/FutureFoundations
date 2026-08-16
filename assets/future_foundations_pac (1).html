@@ -1,0 +1,98 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Foundations PAC | Rebuilding Democracy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Arial', sans-serif; margin: 0; padding: 0; color: #1a202c; background: #f7fafc; }
+        header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; text-align: center; padding: 3rem 1rem; }
+        h1 { font-size: 2.5rem; margin: 0; font-weight: 700; }
+        h2 { font-size: 1.8rem; color: #1e3a8a; margin-top: 2rem; }
+        h3 { font-size: 1.4rem; color: #1e4060; }
+        section { padding: 2rem; max-width: 1000px; margin: auto; }
+        .tier { background: white; border: 1px solid #e2e8f0; padding: 1.5rem; margin: 1rem 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .cta { background: #2563eb; color: white; padding: 1.5rem; text-align: center; border-radius: 8px; margin: 2rem 0; }
+        .cta a { color: white; text-decoration: none; font-weight: 600; margin: 0 1rem; }
+        .cta a:hover { text-decoration: underline; }
+        footer { background: #1e3a8a; color: white; padding: 1rem; text-align: center; font-size: 0.9rem; }
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } h2 { font-size: 1.4rem; } .cta a { display: inline-block; margin: 0.5rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Future Foundations PAC</h1>
+        <p>Building Tomorrow’s Democracy with Accountability</p>
+    </header>
+    <section>
+        <h2>American Renewal Covenant</h2>
+        <p>Politicians don’t just promise—they stake their careers on measurable reforms. Our Covenant ensures candidates deliver on governance, from ranked-choice voting to real-time transparency, with consequences like no re-election for failure.</p>
+        <h3>🏆 Tier I: Founding Architects</h3>
+        <div class="tier">
+            <p>Commit to 3 major reforms (e.g., end gerrymandering in 36 months). Fail 2/3 goals? No re-election, donate 50% salary. Get max PAC support & national spotlight.</p>
+        </div>
+        <h3>🔨 Tier II: Future Builders</h3>
+        <div class="tier">
+            <p>Push 2 tech-forward reforms (e.g., digital transparency in 18 months). Fail? Return donations, lose committee roles. Get substantial PAC support.</p>
+        </div>
+        <h3>🏗️ Tier III: Foundation Stewards</h3>
+        <div class="tier">
+            <p>One major reform (e.g., 95% voting transparency). Fail? Public apology, donate salary. Get standard PAC support.</p>
+        </div>
+        <h3>🛡️ Tier IV: Constitutional Champions</h3>
+        <div class="tier">
+            <p>Defend democratic norms, take the Oath to the Constitution (e.g., publish vote reasoning in 24 hours). Fail? Public improvement plan. Get entry-level PAC support.</p>
+        </div>
+    </section>
+    <section>
+        <h2>Why Future Foundations PAC?</h2>
+        <p>We’re a Hybrid PAC, blending direct candidate support ($5,000/election) with unlimited issue advocacy. Our mission: test governance reform, build coalitions, and lay the foundation for a new political party. Powered by AI-driven tools (like real-time pledge tracking), we’re backed by reformers, tech leaders, and civic groups.</p>
+        <p><strong>Year 1 Goal</strong>: Raise $50,000-$100,000 to support 25 Covenant candidates advancing 3 major reforms.</p>
+    </section>
+    <section class="cta">
+        <p>Join the Renewal: <a href="https://forms.gle/example-pledge" target="_blank">Candidates, Pledge Now</a> | <a href="https://donorbox.org/example-donate" target="_blank">Donate to Reform</a> | <a href="https://forms.gle/example-volunteer" target="_blank">Volunteer</a></p>
+    </section>
+    <footer>
+        <p>Future Foundations PAC | FEC Registered | Contact: <a href="mailto:info@futurefoundationspac.org" style="color: #bfdbfe;">info@futurefoundationspac.org</a></p>
+    </footer>
+</body>
+</html>

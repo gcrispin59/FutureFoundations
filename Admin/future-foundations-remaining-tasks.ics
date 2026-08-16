@@ -1,0 +1,241 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Future Foundations PAC//Remaining Tasks//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Future Foundations — Remaining Tasks
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+TZNAME:ACST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:fb19c48d-358d-4342-a7e8-351aba6ef4f8@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260713T190000
+DTEND;TZID=Australia/Adelaide:20260713T200000
+SUMMARY:FFPAC: Verify Square production donation
+DESCRIPTION:Run a live $5 Supporter checkout at futurefoundationspac.org/donate/. Confirm payment in Square Dashboard and thank-you redirect.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:85212c36-4a8f-4b94-b3f8-3fad4f62c13c@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260713T200000
+DTEND;TZID=Australia/Adelaide:20260713T210000
+SUMMARY:FFPAC: Rotate exposed API credentials
+DESCRIPTION:Rotate Square access tokens and YouTube OAuth secrets shared in chat. Update S:/projects/FutureFoundations/.env and Netlify env vars.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f7de1148-b1ed-48b1-8208-8d184de80104@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260714T190000
+DTEND;TZID=Australia/Adelaide:20260714T200000
+SUMMARY:FFPAC: Git commit — donations and covenant work
+DESCRIPTION:Commit Square donation system\, covenant reframe\, donate pages\, and site links on cursor/ branch. Exclude unrelated Media assets.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:5df20e0e-9bc1-4ce5-a845-966a8d500273@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260714T200000
+DTEND;TZID=Australia/Adelaide:20260714T210000
+SUMMARY:FFPAC: Remove duplicate YouTube Short
+DESCRIPTION:Unpublish or delete True to the Oath teaser v1 (LO0_-YPUoqQ). Keep v3 (4raBrF3lGb4) as canonical.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fe66c0c5-8a29-4625-8f19-e97d8cbadbf1@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260715T190000
+DTEND;TZID=Australia/Adelaide:20260715T200000
+SUMMARY:FFPAC: Publish TTO teaser to TikTok
+DESCRIPTION:Upload teaser_60s_youtube_short.mp4 to TikTok with PAC disclaimer and link to futurefoundationspac.org/shows/true-to-the-oath/.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:8e2c7fc9-d0cf-479a-841f-95b30df9c9e4@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260715T200000
+DTEND;TZID=Australia/Adelaide:20260715T210000
+SUMMARY:FFPAC: Publish TTO teaser to Facebook Reels
+DESCRIPTION:Cross-post 60s vertical to Facebook Reels with disclaimer\, donate CTA\, and show hub link.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f148ca15-76fb-458e-a8d5-3f6c822ae9ab@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260716T190000
+DTEND;TZID=Australia/Adelaide:20260716T200000
+SUMMARY:FFPAC: The 14th Lever Ep1 — script and checklist
+DESCRIPTION:Review ep01-aid-and-comfort.md on cursor/the-14th-lever-media-pipeline. Finalize B-roll\, VO\, and compliance checklist.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:68ac7085-a99b-41c4-a44c-654134f51c0e@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260716T200000
+DTEND;TZID=Australia/Adelaide:20260716T210000
+SUMMARY:FFPAC: The 14th Lever Ep1 — render pipeline
+DESCRIPTION:Run media build in S:/venvs/ffpac-media-publish: voice segments\, visuals\, ~14 min master to Media/the-14th-lever/03-masters/.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:db8be57b-3a67-48f4-bfe7-d72298bf9a39@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260717T190000
+DTEND;TZID=Australia/Adelaide:20260717T200000
+SUMMARY:FFPAC: The 14th Lever Ep1 — YouTube upload
+DESCRIPTION:Upload full episode to @Blackwood59. Title\, description\, chapters\, PAC disclaimer\, links to show hub and /donate/.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:c61ffe9b-7521-44d8-b0fd-664882f3ee05@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260717T200000
+DTEND;TZID=Australia/Adelaide:20260717T210000
+SUMMARY:FFPAC: The 14th Lever show hub and deploy
+DESCRIPTION:Create public/shows/the-14th-lever/ hub with embed\, transcript\, disclaimer. netlify deploy --prod.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:10aae871-899f-486c-bd80-b40800447c64@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260720T190000
+DTEND;TZID=Australia/Adelaide:20260720T200000
+SUMMARY:FFPAC: 14th Lever vertical snippets
+DESCRIPTION:Cut 30s and 60s snippets from Ep1. Publish to Shorts\, TikTok\, and Reels per PUBLISHING_PLAN.md.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:11a7de32-df5f-4133-b4cd-b8bd2e686d70@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260720T200000
+DTEND;TZID=Australia/Adelaide:20260720T210000
+SUMMARY:FFPAC: Push branches and open PR
+DESCRIPTION:Push cursor/true-to-the-oath-teaser and cursor/the-14th-lever-media-pipeline. Open PR(s) for review when ready.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:5c102b71-e131-47fd-af2d-3ed1a9d90125@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260721T190000
+DTEND;TZID=Australia/Adelaide:20260721T200000
+SUMMARY:FFPAC: Covenant-focused homepage
+DESCRIPTION:Replace or merge public/index.html with redesigned PAC landing (covenant language\, donate CTAs\, show links). Deploy.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:03a02d9d-cdf4-4bcc-ad02-a9007988f902@futurefoundationspac.org
+DTSTAMP:20260711T002418Z
+DTSTART;TZID=Australia/Adelaide:20260721T200000
+DTEND;TZID=Australia/Adelaide:20260721T210000
+SUMMARY:FFPAC: Square custom amount and admin key
+DESCRIPTION:Add optional custom-amount Square link tier. Set SQUARE_ADMIN_KEY in Netlify. Republish site links.
+LOCATION:Home office
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Task starting in 15 minutes
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -53,6 +53,8 @@ A Political Action Committee offers several advantages over immediate party form
 
 ## Incorporation and Legal Structure
 
+**Covenant first, compliance shell second.** Future Foundations PAC registers under federal election law where required. That legal form is a **compliance vehicle** — not the source of mission authority. Stewardship, candidate pledges, and supporter relationships are **covenants among citizens**, not corporate contracts that limit action to the constitutional bounds of artificial persons.
+
 ### Federal Requirements
 1. **Registration**: File Statement of Organization (Form 1) within 10 days of $1,000 threshold
 2. **Bank Account**: Dedicated account in North Carolina financial institution
