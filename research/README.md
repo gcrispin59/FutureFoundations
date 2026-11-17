@@ -4,7 +4,7 @@ Civic, historical, and institutional-integrity reference material for Future Fou
 
 **Framing note:** Future Foundations uses **covenant** (solemn civic mutual obligation among persons), not **contract** (commercial obligation among corporate entities), to preserve freedom of action beyond the constitutional limits of artificial persons.
 
-**Provenance:** Some files were copied from `S:/projects/ARTI Scale/` (2026-05-26) as civic/history discussion papers — they are **not** ARTI cognitive-defense agent specs and remain with the PAC.
+**Provenance:** Some files were copied from the legacy ARTI reference library (2026-05-26; now under `S:/projects/ARTI-Scale/research/reference-library/`) as civic/history discussion papers — they are **not** ARTI cognitive-defense agent specs and remain with the PAC.
 
 ## Files
 
@@ -20,4 +20,4 @@ Civic, historical, and institutional-integrity reference material for Future Fou
 - **Future Foundations PAC** (TTO, PCC): primary consumer
 - **Research Navigator**, **Content Curator**: secondary (citation and synthesis)
 
-ARTI Scale and MAGGie Pro are separate products — see [../SEPARATION.md](../SEPARATION.md). Canonical ARTI assessment frameworks live under `S:/projects/ARTI Scale/`.
+ARTI Scale and MAGGie Pro are separate products — see [../SEPARATION.md](../SEPARATION.md). Canonical ARTI product repo: `S:/projects/ARTI-Scale/` (frameworks under `research/reference-library/`).

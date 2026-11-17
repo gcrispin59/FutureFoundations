@@ -150,7 +150,7 @@ See [deployment_md.md](./deployment_md.md) for deployment instructions.
 | Product | Location |
 |---------|----------|
 | MAGGie Pro | `S:/projects/MAGGie/pro/` |
-| ARTI Scale | `S:/projects/ARTI Scale/` |
+| ARTI Scale | `S:/projects/ARTI-Scale/` |
 
 ## Project Structure
 

@@ -17,7 +17,7 @@ Remaining scope:
 | Product | Location |
 |---------|----------|
 | MAGGie Pro | `S:/projects/MAGGie/pro/` — https://maggie-pro.netlify.app |
-| ARTI Scale | `S:/projects/ARTI Scale/` — frameworks, platform schema in `platform/` |
+| ARTI Scale | `S:/projects/ARTI-Scale/` — site + deploy; frameworks in `research/reference-library/` |
 
 ## What was removed from this repo
 
